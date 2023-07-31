@@ -3,6 +3,8 @@ const MyListInput = document.getElementById('MyList');
 const todoList = document.getElementById('todoList');
 const dingSound = document.getElementById('dingSound');
 const deleteSound = document.getElementById('deleteSound');
+const addSound = document.getElementById('addSound');
+
 
 function createTodoItem(todoText) {
     const li = document.createElement('li');
@@ -44,5 +46,6 @@ ButtonAdd.addEventListener('click', function() {
         const todoItem = createTodoItem(todoText);
         todoList.insertBefore(todoItem, todoList.firstChild);
         MyListInput.value = '';
+        addSound.play();
     }
 });
